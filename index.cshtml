@@ -1,0 +1,5 @@
+// Long text
+@if (!String.IsNullOrWhiteSpace((string)Model.Item.Fields.Content))
+{
+    @Html.HtmlSanitize((string)Model.Item.Fields.Content)
+}
