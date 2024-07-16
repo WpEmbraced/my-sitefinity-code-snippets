@@ -3,3 +3,11 @@
 {
     @Html.HtmlSanitize((string)Model.Item.Fields.Content)
 }
+
+// images
+@if (Model.Item.Fields.Thumbnail != null && !String.IsNullOrWhiteSpace(Model.Item.Fields.Thumbnail.Fields.MediaUrl))
+{
+    <div class="item-list__media">
+        <img src="@Model.Item.Fields.Thumbnail.Fields.MediaUrl" alt="@Model.Item.Fields.Thumbnail.Fields.AlternativeText" />
+    </div>
+}
